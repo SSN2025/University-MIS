@@ -1,0 +1,312 @@
+<svg width="880" height="900" viewBox="0 0 880 900" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+
+  <defs>
+    <!-- Arrow for dependency (dashed lines) -->
+    <marker id="dep-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L9 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <!-- Hollow triangle for inheritance/realization -->
+    <marker id="inherit-arrow" viewBox="0 0 12 12" refX="11" refY="6"
+      markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1 2L11 6L1 10Z" fill="white" stroke="#5F5E5A" stroke-width="1.5"
+        stroke-linejoin="round"/>
+    </marker>
+    <!-- Filled arrow for creation -->
+    <marker id="create-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9Z" fill="#5F5E5A"/>
+    </marker>
+  </defs>
+
+  <!-- ======================================================
+       BACKGROUND PACKAGE OUTLINES
+  ====================================================== -->
+
+  <!-- All.Webpages package -->
+  <rect x="8" y="28" width="858" height="350" rx="10" fill="#F7F6F2" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="18" y="24" font-size="11" fill="#888780" font-style="italic">«package» All.Webpages</text>
+
+  <!-- RunnablePack package -->
+  <rect x="8" y="560" width="420" height="135" rx="10" fill="#F7F6F2" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="18" y="557" font-size="11" fill="#888780" font-style="italic">«package» RunnablePack</text>
+
+  <!-- All.Factory package -->
+  <rect x="446" y="560" width="420" height="135" rx="10" fill="#F7F6F2" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="456" y="557" font-size="11" fill="#888780" font-style="italic">«package» All.Factory + All.Webpages (support)</text>
+
+  <!-- All.Exceptions package -->
+  <rect x="8" y="735" width="858" height="100" rx="10" fill="#FFF4EF" stroke="#F0997B" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="18" y="731" font-size="11" fill="#993C1D" font-style="italic">«package» All.Exceptions</text>
+
+  <!-- ======================================================
+       ROW 1 – Page Interface
+  ====================================================== -->
+  <!-- Page <<interface>> : x=330, y=38, w=220, h=82 -->
+  <rect x="330" y="38" width="220" height="82" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text x="440" y="56" font-size="11" fill="#534AB7" text-anchor="middle" font-style="italic">«interface»</text>
+  <text x="440" y="72" font-size="13" fill="#26215C" text-anchor="middle" font-weight="bold">Page</text>
+  <line x1="330" y1="80" x2="550" y2="80" stroke="#534AB7" stroke-width="0.8" opacity="0.5"/>
+  <text x="338" y="94" font-size="11" fill="#3C3489">+ showInfo() : void</text>
+  <text x="338" y="109" font-size="11" fill="#3C3489">+ main() : void</text>
+
+  <!-- ======================================================
+       ROW 2 – Page Implementations
+  ====================================================== -->
+
+  <!-- StudentPage : x=14, y=148, w=195, h=220 -->
+  <rect x="14" y="148" width="195" height="220" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="111" y="168" font-size="13" fill="#042C53" text-anchor="middle" font-weight="bold">StudentPage</text>
+  <line x1="14" y1="175" x2="209" y2="175" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="189" font-size="11" fill="#0C447C">- Student_Id : String</text>
+  <text x="22" y="204" font-size="11" fill="#0C447C">- sc : Scanner</text>
+  <text x="22" y="219" font-size="11" fill="#0C447C">- stmt, rs, ps</text>
+  <line x1="14" y1="226" x2="209" y2="226" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="240" font-size="11" fill="#0C447C">+ main() : void</text>
+  <text x="22" y="255" font-size="11" fill="#0C447C">+ getCourses() : void</text>
+  <text x="22" y="270" font-size="11" fill="#0C447C">+ enroll() : void</text>
+  <text x="22" y="285" font-size="11" fill="#0C447C">+ viewSchedule() : void</text>
+  <text x="22" y="300" font-size="11" fill="#0C447C">+ track() : void</text>
+  <text x="22" y="315" font-size="11" fill="#0C447C">+ drop() : void</text>
+  <text x="22" y="330" font-size="11" fill="#0C447C">+ complain() : void</text>
+  <text x="22" y="345" font-size="11" fill="#0C447C">+ feedback() : void</text>
+  <text x="22" y="360" font-size="10" fill="#185FA5" font-style="italic">+ complainStatus() ...</text>
+
+  <!-- ProfessorPage : x=224, y=148, w=200, h=175 -->
+  <rect x="224" y="148" width="200" height="175" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="324" y="168" font-size="13" fill="#042C53" text-anchor="middle" font-weight="bold">ProfessorPage</text>
+  <line x1="224" y1="175" x2="424" y2="175" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="232" y="189" font-size="11" fill="#0C447C">- prof_Id : String</text>
+  <text x="232" y="204" font-size="11" fill="#0C447C">- sc : Scanner</text>
+  <line x1="224" y1="211" x2="424" y2="211" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="232" y="225" font-size="11" fill="#0C447C">+ main() : void</text>
+  <text x="232" y="240" font-size="11" fill="#0C447C">+ manage() : void</text>
+  <text x="232" y="255" font-size="11" fill="#0C447C">+ ViewStd() : void</text>
+  <text x="232" y="270" font-size="11" fill="#0C447C">+ see_feedback() : void</text>
+  <text x="232" y="285" font-size="11" fill="#0C447C">+ showInfo() : void</text>
+  <text x="232" y="315" font-size="10" fill="#185FA5" font-style="italic">- update_syll/credits/timings ...</text>
+
+  <!-- AdministratorPage : x=440, y=148, w=205, h=195 -->
+  <rect x="440" y="148" width="210" height="205" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="545" y="168" font-size="13" fill="#042C53" text-anchor="middle" font-weight="bold">AdministratorPage</text>
+  <line x1="440" y1="175" x2="650" y2="175" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="448" y="189" font-size="11" fill="#0C447C">- con : Connection</text>
+  <text x="448" y="204" font-size="11" fill="#0C447C">- sc : Scanner</text>
+  <text x="448" y="219" font-size="10.5" fill="#888780" font-style="italic">  ⚠ id param discarded</text>
+  <line x1="440" y1="226" x2="650" y2="226" stroke="#185FA5" stroke-width="0.8" opacity="0.5"/>
+  <text x="448" y="240" font-size="11" fill="#0C447C">+ main() : void</text>
+  <text x="448" y="255" font-size="11" fill="#0C447C">+ manageCourse() : void</text>
+  <text x="448" y="270" font-size="11" fill="#0C447C">+ manageStudent() : void</text>
+  <text x="448" y="285" font-size="11" fill="#0C447C">+ assignProf() : void</text>
+  <text x="448" y="300" font-size="11" fill="#0C447C">+ handleComplains() : void</text>
+  <text x="448" y="315" font-size="11" fill="#0C447C">+ showInfo() : void</text>
+  <text x="448" y="330" font-size="10" fill="#185FA5" font-style="italic">- updategpa(), updatesem() ...</text>
+
+  <!-- ======================================================
+       ROW 3 – TA, FeedBack, JDBCConnection
+  ====================================================== -->
+
+  <!-- TeachingAssistantPage : x=14, y=400, w=210, h=155 -->
+  <rect x="14" y="400" width="210" height="155" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text x="119" y="418" font-size="10.5" fill="#0F6E56" text-anchor="middle" font-style="italic">extends StudentPage</text>
+  <text x="119" y="434" font-size="13" fill="#04342C" text-anchor="middle" font-weight="bold">TeachingAssistantPage</text>
+  <line x1="14" y1="442" x2="224" y2="442" stroke="#0F6E56" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="456" font-size="10.5" fill="#085041" font-style="italic">(inherits Student fields)</text>
+  <line x1="14" y1="463" x2="224" y2="463" stroke="#0F6E56" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="477" font-size="11" fill="#085041">+ main() : void</text>
+  <text x="22" y="492" font-size="11" fill="#085041">+ view_grades() : void</text>
+  <text x="22" y="507" font-size="11" fill="#085041">+ update_grades() : void</text>
+  <text x="22" y="522" font-size="11" fill="#085041">+ getCourses() : void  [override]</text>
+  <text x="22" y="537" font-size="11" fill="#085041">+ showInfo() : void  [override]</text>
+
+  <!-- FeedBack<TYPE> : x=240, y=408, w=175, h=120 -->
+  <rect x="240" y="408" width="175" height="120" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+  <text x="327" y="424" font-size="11" fill="#854F0B" text-anchor="middle" font-style="italic">«generic»</text>
+  <text x="327" y="440" font-size="13" fill="#412402" text-anchor="middle" font-weight="bold">FeedBack&lt;TYPE&gt;</text>
+  <line x1="240" y1="448" x2="415" y2="448" stroke="#854F0B" stroke-width="0.8" opacity="0.5"/>
+  <text x="248" y="462" font-size="11" fill="#633806">~ data : TYPE</text>
+  <line x1="240" y1="470" x2="415" y2="470" stroke="#854F0B" stroke-width="0.8" opacity="0.5"/>
+  <text x="248" y="484" font-size="11" fill="#633806">~ FeedBack(d : TYPE)</text>
+  <text x="248" y="499" font-size="11" fill="#633806">~ getFeedBack() : String</text>
+  <text x="248" y="520" font-size="10" fill="#854F0B" font-style="italic">⚠ package-private access</text>
+
+  <!-- JDBCConnection : x=448, y=390, w=215, h=145 -->
+  <rect x="448" y="390" width="215" height="145" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="555" y="408" font-size="11" fill="#5F5E5A" text-anchor="middle" font-style="italic">«singleton»</text>
+  <text x="555" y="424" font-size="13" fill="#2C2C2A" text-anchor="middle" font-weight="bold">JDBCConnection</text>
+  <line x1="448" y1="432" x2="663" y2="432" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="456" y="446" font-size="11" fill="#444441">- inst : JDBCConnection  {static}</text>
+  <text x="456" y="461" font-size="11" fill="#444441">- connection : Connection  {static}</text>
+  <text x="456" y="476" font-size="10" fill="#888780" font-style="italic">  ⚠ not thread-safe</text>
+  <line x1="448" y1="483" x2="663" y2="483" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="456" y="497" font-size="11" fill="#444441">- JDBCConnection()  [private]</text>
+  <text x="456" y="512" font-size="11" fill="#444441">+ getInstance() : JDBCConnection {s}</text>
+  <text x="456" y="527" font-size="11" fill="#444441">+ getConnection() : Connection</text>
+
+  <!-- ======================================================
+       ROW 4 – Run, PageFactory
+  ====================================================== -->
+
+  <!-- Run : x=14, y=575, w=195, h=110 -->
+  <rect x="14" y="575" width="195" height="110" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="111" y="593" font-size="11" fill="#5F5E5A" text-anchor="middle" font-style="italic">«entry point»</text>
+  <text x="111" y="609" font-size="13" fill="#2C2C2A" text-anchor="middle" font-weight="bold">Run</text>
+  <line x1="14" y1="617" x2="209" y2="617" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="631" font-size="11" fill="#444441">+ con : Connection  {static, public}</text>
+  <text x="22" y="646" font-size="11" fill="#444441">+ stmt : Statement  {static, public}</text>
+  <text x="22" y="661" font-size="10" fill="#888780" font-style="italic">  ⚠ public static field (anti-pattern)</text>
+  <line x1="14" y1="668" x2="209" y2="668" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="682" font-size="11" fill="#444441">+ main() : void  {static}</text>
+
+  <!-- PageFactory : x=452, y=575, w=215, h=110 -->
+  <rect x="452" y="575" width="215" height="110" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+  <text x="559" y="593" font-size="11" fill="#5F5E5A" text-anchor="middle" font-style="italic">«factory»</text>
+  <text x="559" y="609" font-size="13" fill="#2C2C2A" text-anchor="middle" font-weight="bold">PageFactory</text>
+  <line x1="452" y1="617" x2="667" y2="617" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="460" y="638" font-size="11" fill="#444441">(no instance fields)</text>
+  <line x1="452" y1="645" x2="667" y2="645" stroke="#5F5E5A" stroke-width="0.8" opacity="0.5"/>
+  <text x="460" y="659" font-size="11" fill="#444441">+ getPage(Type, Id) : Page</text>
+  <text x="460" y="674" font-size="10.5" fill="#444441">    → returns null for unknown type</text>
+  <text x="460" y="678" font-size="10" fill="#888780" font-style="italic">  ⚠ null return, no null-check in Run</text>
+
+  <!-- ======================================================
+       ROW 5 – Exceptions
+  ====================================================== -->
+
+  <!-- CourseFullException -->
+  <rect x="14" y="748" width="198" height="75" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="113" y="764" font-size="10.5" fill="#993C1D" text-anchor="middle" font-style="italic">extends Exception</text>
+  <text x="113" y="780" font-size="12" fill="#4A1B0C" text-anchor="middle" font-weight="bold">CourseFullException</text>
+  <line x1="14" y1="786" x2="212" y2="786" stroke="#993C1D" stroke-width="0.8" opacity="0.5"/>
+  <text x="22" y="800" font-size="11" fill="#712B13">+ toString() : String</text>
+  <text x="22" y="814" font-size="10" fill="#993C1D" font-style="italic">"No Seat Left in this course"</text>
+
+  <!-- DropDeadlinePassedException -->
+  <rect x="228" y="748" width="232" height="75" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="344" y="764" font-size="10.5" fill="#993C1D" text-anchor="middle" font-style="italic">extends Exception</text>
+  <text x="344" y="780" font-size="12" fill="#4A1B0C" text-anchor="middle" font-weight="bold">DropDeadlinePassedException</text>
+  <line x1="228" y1="786" x2="460" y2="786" stroke="#993C1D" stroke-width="0.8" opacity="0.5"/>
+  <text x="236" y="800" font-size="11" fill="#712B13">+ toString() : String</text>
+  <text x="236" y="814" font-size="10" fill="#993C1D" font-style="italic">"Deadline for dropping has passed"</text>
+
+  <!-- InvalidLoginException -->
+  <rect x="476" y="748" width="210" height="75" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text x="581" y="764" font-size="10.5" fill="#993C1D" text-anchor="middle" font-style="italic">extends Exception</text>
+  <text x="581" y="780" font-size="12" fill="#4A1B0C" text-anchor="middle" font-weight="bold">InvalidLoginException</text>
+  <line x1="476" y1="786" x2="686" y2="786" stroke="#993C1D" stroke-width="0.8" opacity="0.5"/>
+  <text x="484" y="800" font-size="11" fill="#712B13">+ toString() : String</text>
+  <text x="484" y="814" font-size="10" fill="#993C1D" font-style="italic">"Invalid Login Id or Password"</text>
+
+  <!-- ======================================================
+       RELATIONSHIPS / ARROWS
+  ====================================================== -->
+
+  <!-- ── implements: StudentPage → Page ── -->
+  <!-- From top-center of StudentPage (111, 148) up, then right to Page bottom-left area -->
+  <path d="M 111 148 L 111 124 L 370 124 L 370 120" fill="none"
+    stroke="#185FA5" stroke-width="1" stroke-dasharray="5 3"
+    marker-end="url(#inherit-arrow)"/>
+
+  <!-- ── implements: ProfessorPage → Page ── -->
+  <!-- From top-center of ProfessorPage (324, 148) straight up to Page bottom (~120) -->
+  <path d="M 324 148 L 324 130 L 415 130 L 415 120" fill="none"
+    stroke="#185FA5" stroke-width="1" stroke-dasharray="5 3"
+    marker-end="url(#inherit-arrow)"/>
+
+  <!-- ── implements: AdministratorPage → Page ── -->
+  <!-- From top of AdminPage (545, 148) up and left to Page bottom-right area -->
+  <path d="M 545 148 L 545 135 L 480 135 L 480 120" fill="none"
+    stroke="#185FA5" stroke-width="1" stroke-dasharray="5 3"
+    marker-end="url(#inherit-arrow)"/>
+
+  <!-- ── extends: TeachingAssistantPage → StudentPage ── -->
+  <!-- From top-center of TA (119, 400) straight up to StudentPage bottom (111, 368) -->
+  <path d="M 119 400 L 119 382 L 111 382 L 111 368" fill="none"
+    stroke="#0F6E56" stroke-width="1.5"
+    marker-end="url(#inherit-arrow)"/>
+
+  <!-- ── Run uses JDBCConnection ── -->
+  <!-- From Run right (209, 620) to JDBCConnection left (448, 490) -->
+  <path d="M 209 625 L 435 625 L 435 490 L 448 490" fill="none"
+    stroke="#888780" stroke-width="1" stroke-dasharray="4 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="244" y="616" width="38" height="14" rx="3" fill="white"/>
+  <text x="263" y="626" font-size="9.5" fill="#888780" text-anchor="middle" font-style="italic">uses</text>
+
+  <!-- ── Run uses PageFactory ── -->
+  <!-- From Run right (209, 640) to PageFactory left (452, 630) -->
+  <path d="M 209 650 L 340 650 L 340 630 L 452 630" fill="none"
+    stroke="#888780" stroke-width="1" stroke-dasharray="4 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="256" y="638" width="38" height="14" rx="3" fill="white"/>
+  <text x="275" y="648" font-size="9.5" fill="#888780" text-anchor="middle" font-style="italic">uses</text>
+
+  <!-- ── PageFactory creates → StudentPage, ProfessorPage, AdministratorPage, TA ── -->
+  <!-- One arrow from PageFactory up to mid-column of row 2 implementations -->
+  <path d="M 559 575 L 559 550 L 324 550 L 324 323" fill="none"
+    stroke="#888780" stroke-width="1" stroke-dasharray="4 3"
+    marker-end="url(#create-arrow)"/>
+  <rect x="390" y="541" width="40" height="14" rx="3" fill="white"/>
+  <text x="410" y="551" font-size="9.5" fill="#888780" text-anchor="middle" font-style="italic">creates</text>
+
+  <!-- ── StudentPage uses FeedBack ── -->
+  <!-- From StudentPage right (209, 310) to FeedBack left (240, 460) -->
+  <path d="M 209 300 L 222 300 L 222 460 L 240 460" fill="none"
+    stroke="#854F0B" stroke-width="1" stroke-dasharray="4 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="217" y="375" width="30" height="14" rx="3" fill="white"/>
+  <text x="232" y="385" font-size="9.5" fill="#854F0B" text-anchor="middle" font-style="italic">uses</text>
+
+  <!-- ── StudentPage throws CourseFullException ── -->
+  <!-- From StudentPage bottom-left area down to CourseFullEx top -->
+  <path d="M 60 368 L 60 540 L 60 748" fill="none"
+    stroke="#993C1D" stroke-width="1" stroke-dasharray="3 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="40" y="556" width="40" height="14" rx="3" fill="#FFF4EF"/>
+  <text x="60" y="566" font-size="9.5" fill="#993C1D" text-anchor="middle" font-style="italic">throws</text>
+
+  <!-- ── StudentPage throws DropDeadlinePassedException ── -->
+  <!-- From StudentPage bottom (111, 368) down to DropDeadlineEx (344, 748) -->
+  <path d="M 80 368 L 80 555 L 344 555 L 344 748" fill="none"
+    stroke="#993C1D" stroke-width="1" stroke-dasharray="3 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="186" y="546" width="40" height="14" rx="3" fill="#FFF4EF"/>
+  <text x="206" y="556" font-size="9.5" fill="#993C1D" text-anchor="middle" font-style="italic">throws</text>
+
+  <!-- ── Run throws InvalidLoginException ── -->
+  <!-- From Run bottom (111, 685) down to InvalidLoginEx (581, 748) -->
+  <path d="M 111 685 L 111 718 L 581 718 L 581 748" fill="none"
+    stroke="#993C1D" stroke-width="1" stroke-dasharray="3 3"
+    marker-end="url(#dep-arrow)"/>
+  <rect x="336" y="709" width="40" height="14" rx="3" fill="#FFF4EF"/>
+  <text x="356" y="719" font-size="9.5" fill="#993C1D" text-anchor="middle" font-style="italic">throws</text>
+
+  <!-- ======================================================
+       LEGEND
+  ====================================================== -->
+  <rect x="660" y="390" width="215" height="150" rx="6" fill="white" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="762" y="408" font-size="11" fill="#3d3d3a" text-anchor="middle" font-weight="bold">Legend</text>
+  <line x1="668" y1="413" x2="867" y2="413" stroke="#B4B2A9" stroke-width="0.8"/>
+  <!-- Implements -->
+  <line x1="670" y1="428" x2="720" y2="428" stroke="#185FA5" stroke-width="1" stroke-dasharray="5 3" marker-end="url(#inherit-arrow)"/>
+  <text x="728" y="432" font-size="10.5" fill="#3d3d3a">implements</text>
+  <!-- Extends -->
+  <line x1="670" y1="448" x2="720" y2="448" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#inherit-arrow)"/>
+  <text x="728" y="452" font-size="10.5" fill="#3d3d3a">extends</text>
+  <!-- Uses/Dependency -->
+  <line x1="670" y1="468" x2="720" y2="468" stroke="#888780" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#dep-arrow)"/>
+  <text x="728" y="472" font-size="10.5" fill="#3d3d3a">uses / depends</text>
+  <!-- Throws -->
+  <line x1="670" y1="488" x2="720" y2="488" stroke="#993C1D" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#dep-arrow)"/>
+  <text x="728" y="492" font-size="10.5" fill="#3d3d3a">throws</text>
+  <!-- Creates -->
+  <line x1="670" y1="508" x2="720" y2="508" stroke="#888780" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#create-arrow)"/>
+  <text x="728" y="512" font-size="10.5" fill="#3d3d3a">creates</text>
+  <!-- Issues note -->
+  <text x="670" y="527" font-size="10" fill="#993C1D" font-style="italic">⚠ = design issue noted</text>
+
+  <!-- TITLE -->
+  <text x="440" y="870" font-size="12" fill="#888780" text-anchor="middle">University MIS — UML Class Diagram  (SVNIT project)</text>
+
+</svg>
