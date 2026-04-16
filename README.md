@@ -1,6 +1,6 @@
 # University Management Information System (MIS)
 
-A Java-based console application backed by a MySQL database that manages university operations across four user roles: **Student**, **Professor**, **Teaching Assistant**, and **Administrator**.
+A Java-based console application backed by a MySQL database that manages university operations across four user roles: **Student**, **Professor**, **Teaching Assistant**, and **Administrator**.This also uses design patterns in it's functioning.
 
 ---
 
